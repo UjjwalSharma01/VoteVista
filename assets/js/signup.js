@@ -56,7 +56,23 @@ document.getElementById('login-form').addEventListener('submit', (event) => {
     const email = document.getElementById('login-email').value;
     const password = document.getElementById('login-password').value;
 
-    signInWithEmailAndPassword(auth, email, password)
+    // signInWithEmailAndPassword(auth, email, password)
+    //     .then((userCredential) => {
+    //         // The user has been logged in
+    //         const user = userCredential.user;
+    //         console.log('User logged in:', user);
+    //         alert('Logged in successfully');
+
+    //         // Store the user's email in local storage
+    //         localStorage.setItem("userEmail", user.email);
+
+    //         // Ask the user if they want to create a form
+    //         if (confirm('Do you want to create a form?')) {
+    //             // If they confirm, redirect to form.html
+    //             window.location.href = 'customize.html';
+    //         } 
+    //     })
+        signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             // The user has been logged in
             const user = userCredential.user;
@@ -66,11 +82,8 @@ document.getElementById('login-form').addEventListener('submit', (event) => {
             // Store the user's email in local storage
             localStorage.setItem("userEmail", user.email);
 
-            // Ask the user if they want to create a form
-            if (confirm('Do you want to create a form?')) {
-                // If they confirm, redirect to form.html
-                window.location.href = 'customize.html';
-            } 
+            // Redirect to dashboard page
+            window.location.href = './dashboard.html';
         })
         .catch((error) => {
             // There was an error logging in the user

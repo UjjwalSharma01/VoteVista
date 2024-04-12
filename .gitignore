@@ -1,0 +1,5 @@
+*.code-workspacesendgrid.env
+sendgrid.env
+sendgrid.env
+/*.code-workspace
+/node_modules/

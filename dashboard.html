@@ -1,0 +1,73 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 50px;
+        }
+
+        p {
+            color: #666;
+        }
+
+        #userEmail {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        .banner {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to Your Dashboard</h1>
+    <p>This is your dashboard.</p>
+    <div id="userEmail"></div>
+
+    <button onclick="createForm()">Create Form</button>
+
+    <div id="yourForms">
+        <h2>Your Forms</h2>
+        <div id="formsList"></div>
+    </div>
+    <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>
